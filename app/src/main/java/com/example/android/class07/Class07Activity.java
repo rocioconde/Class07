@@ -1,18 +1,26 @@
 package com.example.android.class07;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+import android.view.View;
 
 public class Class07Activity extends AppCompatActivity {
 
-    private TextView displayText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class07);
+    }
 
-        displayText = (TextView) findViewById(R.id.display_text);
+    public void launchActivity(View view) {
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra(Keys.STRING, "Hello, baby");
+        intent.putExtra(Keys.NUM, 100);
+        startActivity(intent);
+
+
     }
 }

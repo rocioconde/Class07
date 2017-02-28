@@ -8,5 +8,6 @@ public interface Keys {
 
     String STRING = "string";
     String NUM = "num";
-    
+    String PERSON = "person";
+
 }

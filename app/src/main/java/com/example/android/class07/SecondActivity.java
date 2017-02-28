@@ -17,10 +17,12 @@ public class SecondActivity extends AppCompatActivity {
         displayText = (TextView) findViewById(R.id.display_text);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(Keys.STRING);
-        int num = intent.getIntExtra(Keys.NUM, 0);
+//        String message = intent.getStringExtra(Keys.STRING);
+//        int num = intent.getIntExtra(Keys.NUM, 0);
 
-        displayText.setText(message + " " + num);
+        Person rocio = (Person) intent.getSerializableExtra(Keys.PERSON);
+        displayText.setText(rocio.toString());
+
     }
 
 
